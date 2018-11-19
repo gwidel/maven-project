@@ -4,6 +4,7 @@ pipeline {
   stages {
     /* stage can have one or more steps */
     stage('Build') {
+      /* agent section can also go here*/
       steps {
         sh 'mvn clean package'
       }
@@ -14,11 +15,4 @@ pipeline {
         }
       }
     }
-    stage('Deploy To Staging') {
-      /* agent section can also go here*/
-      steps {
-
-      }
-    }
-  }
 }
